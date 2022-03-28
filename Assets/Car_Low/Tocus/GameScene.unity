@@ -1548,9 +1548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d745810414b968648814b49c049e1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 2000
-  breakForce: 500
-  maxSteerAngle: 10
+  motorForce: 100
+  maxSteerAngle: 30
   frontLeftWheelCollider: {fileID: 1443143578}
   frontRightWheelCollider: {fileID: 1497995086}
   rearLeftWheelCollider: {fileID: 1364382100}
@@ -2104,7 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 2, z: -7}
-  target: {fileID: 4013071816891347}
+  target: {fileID: 1213368239}
   translateSpeed: 10
   rotationSpeed: 10
 --- !u!20 &1853051910
@@ -2740,9 +2739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d745810414b968648814b49c049e1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 1000
-  breakForce: 500
-  maxSteerAngle: 6
+  motorForce: 300
+  maxSteerAngle: 30
   frontLeftWheelCollider: {fileID: 609183557}
   frontRightWheelCollider: {fileID: 434079374}
   rearLeftWheelCollider: {fileID: 1108597205}
