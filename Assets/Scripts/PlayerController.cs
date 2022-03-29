@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private const float LANE_DISTANCE = 2.0f;
-    private const float TURN_SPEED = 0.05f;
+    private const float TURN_SPEED = 0.03f;
 
 
     private bool isDriving=false;
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first 
     private int desiredLane = 1;//0 = Left 2=Rightframe update
     //Speed Modifier
-    private float originalSpeed = 17.0f;
+    private float originalSpeed = 14.0f;
     private float speed = 20.0f;
     private float speedIncreaseLastTick;
     private float speedIncreaseTime = 2.5f; 
