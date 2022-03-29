@@ -5,26 +5,23 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Vector3 offset;
-    [SerializeField] private Transform target;
-    [SerializeField] private float translateSpeed;
-    [SerializeField] private float rotationSpeed;
-    private void FixedUpdate()
+    public GameObject followTarget;
+    public float moveSpeed;
+    // Start is called before the first frame update
+    void Start()
     {
-        HandleTranslation();
-        HandleRotation();
+        
     }
 
-    private void HandleTranslation()
+    // Update is called once per frame
+    void Update()
     {
-        var targetPosition = target.TransformPoint(offset);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, translateSpeed * Time.deltaTime);
+        if (followTarget != null) {
+            transform.position = Vector3.Lerp(transform.position,
+                followTarget.transform.position, Time.deltaTime * moveSpeed);
+        }  
     }
-    private void HandleRotation()
-    {
-        var direction = target.position - transform.position;
-        var rotation = Quaternion.LookRotation(direction, Vector3.up);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
-    }
+
+  
 
 }
