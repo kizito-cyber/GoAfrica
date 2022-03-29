@@ -16,7 +16,7 @@ public class Coiin : MonoBehaviour
         {
             GameManager.Instance.GetCoin();
             //anim.SetTrigger("Collected");
-            Destroy(this.gameObject, 1.5f);
+    
         }
     }
 }

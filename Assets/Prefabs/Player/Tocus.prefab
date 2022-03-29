@@ -1414,9 +1414,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4013073016293618}
   - component: {fileID: 95629998500851910}
-  - component: {fileID: 7980505934104855647}
   - component: {fileID: 2250885489672148225}
   - component: {fileID: 5604621000370663216}
+  - component: {fileID: 2715026280943260354}
   m_Layer: 0
   m_Name: Tocus
   m_TagString: Player
@@ -1433,7 +1433,7 @@ Transform:
   m_GameObject: {fileID: 1610265466720824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.3868145, z: 0}
-  m_LocalScale: {x: 0.6070313, y: 0.7, z: 0.54249996}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4664702294743630}
   - {fileID: 4645530841161104}
@@ -1487,24 +1487,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &7980505934104855647
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610265466720824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.5
-  m_Radius: 1
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!114 &2250885489672148225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,6 +1511,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd99056c434700498dc8dbbfa61c3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!143 &2715026280943260354
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610265466720824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.5
+  m_Radius: 1.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &1672185482629448
 GameObject:
   m_ObjectHideFlags: 0
