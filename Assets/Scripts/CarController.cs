@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CarController : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public class CarController : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     float currentSteerAngle;
-    
-   
+    public AudioSource drivingSound;
+    public AudioClip increaseSpeed;
+    public AudioClip decreaspeSpeed;
+    public AudioClip idleSound;
 
     [SerializeField] private float motorForce;
     [SerializeField] private float maxSteerAngle;
@@ -31,6 +34,21 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        if (verticalInput > 0)
+        {
+            drivingSound.PlayOneShot(increaseSpeed);
+            
+        }
+        else
+        {
+            drivingSound.PlayOneShot(decreaspeSpeed);
+        }
+        if(verticalInput==0)
+        {
+            drivingSound.PlayOneShot(idleSound);
+        }
+
+        
     }
     void GetInput()
     {
