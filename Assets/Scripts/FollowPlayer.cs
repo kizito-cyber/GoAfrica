@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    private Transform playerTransform;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private Transform target;
+    [SerializeField] private float translateSpeed;
+    [SerializeField] private float rotationSpeed;
+
+    private void FixedUpdate()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        HandleTranslation();
+        HandleRotation();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleTranslation()
     {
-        transform.position = Vector3.forward * playerTransform.position.z;
+        var targetPosition = target.TransformPoint(offset);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, translateSpeed * Time.deltaTime);
+    }
+    private void HandleRotation()
+    {
+        var direction = target.position - transform.position;
+        var rotation = Quaternion.LookRotation(direction, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 }
