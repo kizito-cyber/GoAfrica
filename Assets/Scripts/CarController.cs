@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class CarController : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class CarController : MonoBehaviour
     }
     void GetInput()
     {
-        horizontalInput = Input.GetAxis(HORIZONTAL);
+        horizontalInput =Input.GetAxis(HORIZONTAL);
         verticalInput = Input.GetAxis(VERTICAL);
         
        

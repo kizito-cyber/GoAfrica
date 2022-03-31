@@ -13,6 +13,6 @@ public class CarObstacleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, 2 * Time.deltaTime);
+        //transform.Translate(0, 0, 2 * Time.deltaTime);
     }
 }

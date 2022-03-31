@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Prefabs/Player/Scenes/Menu.unity
     guid: e1082d7e0d39ff04a9c4785990db5b99
-  - enabled: 1
-    path: Assets/Car_Low/Tocus/Car_Tocus.unity
-    guid: 6254e3dd1693fe442b058dff93633dce
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
